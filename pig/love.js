@@ -122,7 +122,7 @@
         },
         drawHeart: function() {
             var ctx = this.tree.ctx, heart = this.heart;
-            var point = heart.point, color = heart.color, 
+            var point = heart.point, color = color || '#e0287e',   //初始界面的爱心
                 scale = heart.scale;
             ctx.save();
             ctx.fillStyle = color;
@@ -154,7 +154,7 @@
         },
         drawText: function() {
             var ctx = this.tree.ctx, heart = this.heart;
-            var point = heart.point, color = heart.color, 
+            var point = heart.point, color = color || '#e0287e', //初始界面的爱心的划线
                 scale = heart.scale;
             ctx.save();
             ctx.strokeStyle = color;
@@ -169,7 +169,7 @@
             ctx.moveTo(0, 0);
             ctx.scale(0.75, 0.75);
             ctx.font = "12px 微软雅黑,Verdana"; // 字号肿么没有用? (ˉ(∞)ˉ)
-            ctx.fillText("Click here", 23, 10);
+            ctx.fillText("拆开我的心", 23, 10);
             ctx.restore();
         },
         clear: function() {
